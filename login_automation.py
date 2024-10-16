@@ -19,12 +19,15 @@ def AutoLogin(login_url, username, password) :
             print(login_url + " Login failed.")
     finally:
         print("fin")
-
-username = input("your username : ")
-password = input("your password : ")
-url = "https://learn.zone01oujda.ma/"
-AutoLogin(url, username, password)
-username = input("your username : ")
-password = input("your password : ")
-url = "https://discord.com/login"
-AutoLogin(url, username, password)
+try :
+    password = input("your password : ")
+    for i in range(1, 200) :
+        print("\n")
+    username = input("Zone 01 username : ")
+    url = "https://learn.zone01oujda.ma/"
+    AutoLogin(url, username, password)
+    username = input("Discord your username : ")
+    url = "https://discord.com/login"
+    AutoLogin(url, username, password)
+except :
+    print("exit")
